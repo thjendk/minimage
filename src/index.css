@@ -6,4 +6,28 @@
   .page-center {
     @apply flex flex-col items-center justify-center flex-grow text-center;
   }
+
+  .container {
+    @apply rounded border p-5 shadow;
+  }
+
+  .gradient {
+    @apply bg-gradient-to-br from-blue-200 to-white;
+  }
+
+  h1 {
+    @apply text-3xl font-bold mb-2;
+  }
+
+  input {
+    @apply text-lg p-3 border border-black rounded;
+  }
+
+  button {
+    @apply text-lg px-4 py-2 border border-black shadow rounded-xl m-auto hover:underline;
+  }
+}
+
+.container {
+  @apply max-w-3xl;
 }

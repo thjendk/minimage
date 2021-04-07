@@ -1,10 +1,12 @@
 module.exports = {
-    style: {
-      postcss: {
-        plugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
-        ],
-      },
+  style: {
+    postcss: {
+      plugins: [require("tailwindcss"), require("autoprefixer")],
     },
-  }
+  },
+  devServer: {
+    proxy: {
+      "/api": "http://localhost:3001",
+    },
+  },
+};
