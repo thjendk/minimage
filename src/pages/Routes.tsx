@@ -26,7 +26,7 @@ export default function Routes() {
         dispatch(authReducer.actions.setUser(res.data));
       });
     }
-  }, [dispatch, cookies]);
+  }, [dispatch, cookies.token]);
 
   return (
     <Router>
