@@ -3,9 +3,11 @@ import express from "express";
 import path from "path";
 import routes from "./routes";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(cors());
 app.use(json());
 app.use(cookieParser());
 app.use("/api", routes);
