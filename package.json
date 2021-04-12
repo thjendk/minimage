@@ -41,11 +41,12 @@
   "scripts": {
     "start": "ts-node -P server/tsconfig.json -r tsconfig-paths/register build/server/index.js",
     "server": "cd server && nodemon",
-    "build": "knex migrate:latest && npm run build:client && npm run build:server",
+    "build": "npm run migrate && npm run build:client && npm run build:server",
     "build:client": "craco build",
     "build:server": "cd server && tsc -p tsconfig.json",
     "client": "craco start",
-    "dev": "npm-run-all --parallel server client"
+    "dev": "npm-run-all --parallel server client",
+    "migrate": "cd server && knex migrate:latest"
   },
   "eslintConfig": {
     "extends": [
