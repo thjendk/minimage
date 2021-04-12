@@ -16,7 +16,7 @@
   }
 
   h1 {
-    @apply text-3xl font-bold mb-2;
+    @apply text-2xl text-blue-500 font-bold mb-2;
   }
 
   input {
@@ -25,6 +25,11 @@
 
   button {
     @apply text-lg px-4 py-2 border border-black shadow rounded-xl m-auto hover:underline;
+  }
+
+  button:disabled {
+    pointer-events: none;
+    @apply opacity-70;
   }
 }
 
