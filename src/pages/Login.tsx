@@ -20,10 +20,7 @@ export default function Login() {
       <div className="container gradient">
         <h1>Login</h1>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSubmit(onSubmit);
-          }}
+          onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col gap-2 max-w-md m-auto"
         >
           <input {...register("username")} />
